@@ -16,13 +16,15 @@ function draw() {
   
   fill(250);
   noStroke();
-  circle(windowWidth/2, windowHeight*0.86, 80); // 중심x좌표, y좌표, 지름
+  circle(windowWidth/2, windowHeight*0.86, windowWidth*0.28); // 중심x좌표, y좌표, 지름
   
   
   
   fill(255);
   stroke(0);
-  strokeWeight(5);
+  strokeWeight(3);
+  circle(windowWidth/2, windowHeight*0.86, windowWidth*0.25); // 중심x좌표, y좌표, 지름
+  
   //circle(196.5, 570, 68);
   
   
