@@ -6,6 +6,10 @@ function setup() {
     video.size(windowWidth, windowHeight*0.7);
 
     video.hide();
+  
+    fullscreenButton = createButton('Fullscreen');
+    fullscreenButton.position(20, 20);
+    fullscreenButton.mousePressed(goFullscreen);
 }
 
 function draw() {
@@ -30,4 +34,11 @@ function mousePressed() {
     let fs = fullscreen();
     fullscreen(!fs);
   }
+}
+
+
+
+function goFullscreen() {
+  let fs = fullscreen();
+  fullscreen(!fs); // 전체화면 모드로 전환 또는 해제
 }
