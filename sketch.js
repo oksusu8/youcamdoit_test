@@ -24,3 +24,10 @@ function draw() {
     circle(windowWidth/2, windowHeight*0.87, windowWidth*0.11);
 
 }
+
+function mousePressed() {
+  if (mouseX > 0 && mouseX < windowWidth && mouseY > 0 && mouseY < windowHeight) {
+    let fs = fullscreen();
+    fullscreen(!fs);
+  }
+}

@@ -11,6 +11,11 @@ nav {
     padding: 10px;
 }
 
+nav button {
+  font-size: 40px;
+  margin: 0 30px ;
+}
+
 
 .camera-container {
     position: relative;
