@@ -6,7 +6,7 @@ function setup() {
   canvas.parent("cam");
   
   video = createCapture(VIDEO);
-  video.size(windowWidth, windowHeight*0.7);
+  //video.size(windowWidth, windowHeight);
 
   video.hide();
 }
