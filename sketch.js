@@ -13,6 +13,7 @@ function setup() {
   
   // 버튼을 중심에 그리기
   drawButton();
+  captureBtn();
   autobtn_draw();
 }
 
@@ -29,6 +30,20 @@ function autobtn_draw() {
   textAlign(CENTER, CENTER);
   textSize(16);
   text("Auto", buttonX, 0+buttonHeight/2);
+}
+
+
+function captureBtn() {
+  fill(255);
+  circle(buttonX, height*0.9 ,150);
+  
+  fill(0);
+  circle(buttonX, height*0.9 ,130);
+  
+  fill(255);
+  circle(buttonX, height*0.9 ,120);
+  
+  
 }
 
 function drawButton() {
