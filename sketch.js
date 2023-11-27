@@ -2,6 +2,8 @@ let buttonX, buttonY;
 let buttonWidth = 100;
 let buttonHeight = 40;
 
+let video;
+
 //let shutter_img;
 
 function preload() {
@@ -13,7 +15,9 @@ function setup() {
   buttonX = width / 2;
   buttonY = height / 2;
   
-  //background(160);
+  video = createCapture(VIDEO);
+  video.size(width, height*0.7);
+  video.hide();
   
   
   layoutDraw();
@@ -29,18 +33,24 @@ function setup() {
   
 }
 
+function draw() {
+  image(video, 0, height*0.08);
+}
+
 
 function layoutDraw() {
   // 상단 레이아웃 박스
-  fill(255,0,0);
+  fill(255);
   noStroke();
   rect(0, 0, width, height*0.08);
   
-  fill(0,255,0);
-  noStroke();
-  rect(0, height*0.08, width, height*0.7);
   
-  fill(0,0,255);
+  //image(video, 0, height*0.08);
+  //fill(0,255,0);
+  //noStroke();
+  //rect(0, height*0.08, width, height*0.7);
+  
+  fill(0);
   noStroke();
   rect(0, height*0.78, width, height*0.22);
 }
@@ -49,23 +59,24 @@ function layoutDraw() {
 
 function autobtn_draw() {
   fill(255);
-  rect(buttonX, 0+buttonHeight/2, buttonWidth, buttonHeight);
+  stroke(0);
+  rect(buttonX, height*0.04, height*0.08, height*0.04);
   
   fill(0);
   textAlign(CENTER, CENTER);
   textSize(16);
-  text("Auto", buttonX, 0+buttonHeight/2);
+  text("Auto", buttonX, height*0.04);
 }
 
 
 function captureBtn() {
   fill(255);
   noStroke();
-  circle(buttonX, height*0.89, height*0.1);
+  circle(buttonX, height*0.91, height*0.1);
   fill(0);
-  //circle(buttonX, height*0.89 ,windowWidth*0.175);
+  circle(buttonX, height*0.91 ,height*0.09);
   fill(255);
-  //circle(buttonX, height*0.89 ,windowWidth*0.15);
+  circle(buttonX, height*0.91 ,height*0.08);
   
 
 }
