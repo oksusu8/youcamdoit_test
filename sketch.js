@@ -23,7 +23,7 @@ function setup() {
 
   
   
-  drawButton();
+  //drawButton();
   captureBtn();
   autobtn_draw();
   
@@ -42,8 +42,7 @@ function layoutDraw() {
   
   fill(0,0,255);
   noStroke();
-  rect(0, height*0.7, width, height*0.22);
-  
+  rect(0, height*0.78, width, height*0.22);
 }
 
 
@@ -62,7 +61,7 @@ function autobtn_draw() {
 function captureBtn() {
   fill(255);
   noStroke();
-  circle(buttonX, height*0.89, height*0.07);
+  circle(buttonX, height*0.89, height*0.1);
   fill(0);
   //circle(buttonX, height*0.89 ,windowWidth*0.175);
   fill(255);
