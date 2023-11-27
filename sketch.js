@@ -2,24 +2,50 @@ let buttonX, buttonY;
 let buttonWidth = 100;
 let buttonHeight = 40;
 
+//let shutter_img;
+
+function preload() {
+  //shutter_img = loadImage('images/shutter.jpg');
+}
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   buttonX = width / 2;
   buttonY = height / 2;
   
+  //background(160);
+  
+  
+  layoutDraw();
+  
   // rectMode 함수를 사용하여 사각형 모드를 CENTER로 설정
   rectMode(CENTER);
-  background(160);
+
   
-  // 버튼을 중심에 그리기
+  
   drawButton();
   captureBtn();
   autobtn_draw();
+  
 }
 
-function draw() {
-  // 화면을 그리는 다른 코드
+
+function layoutDraw() {
+  // 상단 레이아웃 박스
+  fill(255,0,0);
+  noStroke();
+  rect(0, 0, width, height*0.08);
+  
+  fill(0,255,0);
+  noStroke();
+  rect(0, height*0.08, width, height*0.7);
+  
+  fill(0,0,255);
+  noStroke();
+  rect(0, height*0.7, width, height*0.22);
+  
 }
+
 
 
 function autobtn_draw() {
@@ -35,15 +61,14 @@ function autobtn_draw() {
 
 function captureBtn() {
   fill(255);
-  circle(buttonX, height*0.9 ,150);
-  
+  noStroke();
+  circle(buttonX, height*0.89, height*0.07);
   fill(0);
-  circle(buttonX, height*0.9 ,130);
-  
+  //circle(buttonX, height*0.89 ,windowWidth*0.175);
   fill(255);
-  circle(buttonX, height*0.9 ,120);
+  //circle(buttonX, height*0.89 ,windowWidth*0.15);
   
-  
+
 }
 
 function drawButton() {
@@ -57,6 +82,13 @@ function drawButton() {
   textSize(16);
   text("버튼", buttonX, buttonY);
 }
+
+
+
+
+
+
+
 
 function mousePressed() {
   // 마우스 클릭이 버튼 내에 있는지 확인
